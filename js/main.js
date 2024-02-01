@@ -9,6 +9,7 @@ function cleanUp(){
   document.getElementById('passwordError').innerHTML = ''
   document.getElementById('confirmPasswordError').innerHTML = ''
   document.getElementById('emessage').innerHTML = ''
+  document.getElementById('successMessage').innerHTML = ''
 }
 // Clean up input fields
 function cleanUpInput(){
@@ -19,6 +20,7 @@ function cleanUpInput(){
   document.getElementById('password').value = ''
   document.getElementById('confirmPassword').value = ''
   document.getElementById('emessage').innerHTML = ''
+  document.getElementById('successMessage').innerHTML = ''
   const submitBtn = document.getElementById('changeButton');
   submitBtn.disabled = true;
 }
@@ -73,7 +75,7 @@ function signup() {
   cleanUpInput();
   
   const content ="Hey! " + firstName + " you have sucessfully completed form Validation"
-  document.getElementById('emessage').innerHTML = content
+  document.getElementById('successMessage').innerHTML = content
   alert(content)
 }
 }
@@ -88,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   let passwordInput = document.getElementById('password');
   let confirmPasswordInput = document.getElementById('confirmPassword');
   const submitBtn = document.getElementById('changeButton');
+  
   submitBtn.disabled = true;
 
   function checkFields() {
