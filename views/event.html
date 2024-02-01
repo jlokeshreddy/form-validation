@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/form.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="../js/event.js"></script>
+    <title>Eventlistner Form validation</title>
+</head>
+
+<body>
+    <nav class="navbar">
+         <h2> Eventlistner Form Validation</h2>
+         <a class="button" href="../index.html">Onclick Form</a>
+    </nav>
+    <div class="message"">
+        <pre id="userData"></pre>
+    </div>
+    <div class="container">
+        <form action="" id="loginForm">
+            
+            <div>
+                <label>Firstname</label>
+                <input type="text" id="firstName" class ="form-control">
+                <pre id="fnameError" class="error-message"></pre>
+            </div>
+            <div>
+                <label>Lastname</label>
+                <input type="text" id="lastName" class ="form-control">
+                <pre id="lnameError" class="error-message"></pre>
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" id="email" class ="form-control">
+                <pre id="emailError" class="error-message"></pre>
+            </div>
+            <div>
+                <label>Mobileno</label>
+                <input type="number" id="mobileNo" class ="form-control">
+                <pre id="mobileError" class="error-message"></pre>
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" id="password" class ="form-control">
+                <pre id="passwordError" class="error-message"></pre>
+                <pre>*Should contain minlength(8) atleast one uppercase
+lowercase number and special character(!@#$%&.)
+                </pre>
+            </div>
+            <div>
+                <label>Confirm Password</label>
+                <input type="text" id="confirmPassword" class ="form-control">
+                <pre id="confirmPasswordError" class="error-message"></pre>
+            </div>
+            <button type="submit">submit</button>
+            <button type="reset">reset</button>
+        </form>
+    </div>
+    
+</body>
+
+</html>
