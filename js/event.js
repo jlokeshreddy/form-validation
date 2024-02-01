@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     document.getElementById('mobileError').innerHTML = ''
     document.getElementById('passwordError').innerHTML = ''
     document.getElementById('confirmPasswordError').innerHTML = ''
+    document.getElementById('emessage').innerHTML = ''
   }
   // Clean up input fields
   function cleanUpInput(){
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     document.getElementById('mobileNo').value = ''
     document.getElementById('password').value = ''
     document.getElementById('confirmPassword').value = ''
+    document.getElementById('emessage').innerHTML = ''
   }
   
   // Get the login form element
@@ -67,12 +69,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
       document.getElementById('confirmPasswordError').innerHTML = 'passwords did`t match please enter again'
     }
     const content ="Hey! form Validation is failed please check and resubmit the form"
+    document.getElementById('emessage').innerHTML = content
     alert(content)
   }else{
     // Clean up any previous error messages
     cleanUpInput();
 
     const content ="Hey! " + firstName + " you have sucessfully completed form Validation"
+    document.getElementById('emessage').innerHTML = content
     alert(content)
   }
   });
