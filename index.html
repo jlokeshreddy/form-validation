@@ -19,44 +19,45 @@
          <a class="button" href="./views/event.html">Eventlistner Form</a>
         </nav>
         <pre id="emessage"></pre>
+        <pre id="successMessage"></pre>
         <br>
     <div class="container">
         <form action="" id="loginForm">
             
             <div>
-                <label>Firstname</label>
-                <input type="text" id="firstName" class ="form-control">
+                <label>*Firstname</label>
+                <input type="text" id="firstName" class ="form-control" placeholder="Enter Firstname" required>
                 <pre id="fnameError" class="error-message"></pre>
             </div>
             <div>
-                <label>Lastname</label>
-                <input type="text" id="lastName" class ="form-control">
+                <label>*Lastname</label>
+                <input type="text" id="lastName" class ="form-control" placeholder="Enter Lastname">
                 <pre id="lnameError" class="error-message"></pre>
             </div>
             <div>
-                <label>Email</label>
-                <input type="email" id="email" class ="form-control">
+                <label>*Email</label>
+                <input type="email" id="email" class ="form-control" placeholder="Enter Email">
                 <pre id="emailError" class="error-message"></pre>
             </div>
             <div>
-                <label>Mobileno</label>
-                <input type="number" id="mobileNo" class ="form-control">
+                <label>*Mobileno</label>
+                <input type="number" id="mobileNo" class ="form-control" placeholder="Enter Mobileno">
                 <pre id="mobileError" class="error-message"></pre>
             </div>
             <div>
-                <label>Password</label>
-                <input type="password" id="password" class ="form-control">
+                <label>*Password</label>
+                <input type="password" id="password" class ="form-control" placeholder="Enter Password">
                 <pre id="passwordError" class="error-message"></pre>
                 <pre>*Should contain minlength(8) atleast one uppercase
 lowercase number and special character(!@#$%&.)
                 </pre>
             </div>
             <div>
-                <label>Confirm Password</label>
-                <input type="text" id="confirmPassword" class ="form-control">
+                <label>*Confirm Password</label>
+                <input type="text" id="confirmPassword" class ="form-control" placeholder="Confirm Password">
                 <pre id="confirmPasswordError" class="error-message"></pre>
             </div>
-            <button type="button" onclick="signup()">submit</button>
+            <button type="button"  id="changeButton" onclick="signup()">submit</button>
         <button type="reset" onclick="cleanUp()">reset</button>
         </form>
     </div>

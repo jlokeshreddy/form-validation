@@ -1,3 +1,4 @@
+
 // Clean up function
 function cleanUp(){
   // Clear error messages
@@ -18,6 +19,8 @@ function cleanUpInput(){
   document.getElementById('password').value = ''
   document.getElementById('confirmPassword').value = ''
   document.getElementById('emessage').innerHTML = ''
+  const submitBtn = document.getElementById('changeButton');
+  submitBtn.disabled = true;
 }
 
 function signup() {
@@ -74,3 +77,46 @@ function signup() {
   alert(content)
 }
 }
+
+
+document.addEventListener('DOMContentLoaded', function(event) {
+
+  let firstNameInput = document.getElementById('firstName');
+  let lastNameInput = document.getElementById('lastName');
+  let emailInput = document.getElementById('email');
+  let mobileNoInput = document.getElementById('mobileNo');
+  let passwordInput = document.getElementById('password');
+  let confirmPasswordInput = document.getElementById('confirmPassword');
+  const submitBtn = document.getElementById('changeButton');
+  submitBtn.disabled = true;
+
+  function checkFields() {
+      let firstNameValue = firstNameInput.value;
+      let lastNameValue = lastNameInput.value;
+      let emailValue = emailInput.value;
+      let mobileNoValue = mobileNoInput.value;
+      let passwordValue = passwordInput.value;
+      let confirmPasswordValue = confirmPasswordInput.value;
+
+      if (
+          firstNameValue !== '' &&
+          lastNameValue !== '' &&
+          emailValue !== '' &&
+          mobileNoValue !== '' &&
+          passwordValue !== '' &&
+          confirmPasswordValue !== ''
+      ) {
+          submitBtn.disabled = false;
+      } else {
+          submitBtn.disabled = true;
+      }
+  }
+
+  firstNameInput.addEventListener('input', checkFields);
+  lastNameInput.addEventListener('input', checkFields);
+  emailInput.addEventListener('input', checkFields);
+  mobileNoInput.addEventListener('input', checkFields);
+  passwordInput.addEventListener('input', checkFields);
+  confirmPasswordInput.addEventListener('input', checkFields);
+
+})

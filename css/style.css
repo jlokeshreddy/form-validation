@@ -1,19 +1,18 @@
 body {
     margin: 0px;
-    background-color: #9BBEC8;
     font-family: "Open Sans", sans-serif;
     color: #164863;
   }
   .navbar{
     background-color: #164863;
-    color: #9BBEC8;
     width: 100%;
-    height:50px;
+    height:60px;
   }
   .navbar h2{
+    color: whitesmoke;
     margin: 0px;
     margin-left: 20px;
-    padding-top: 10px;
+    padding-top: 15px;
     float: left;
   }
   .container {
@@ -36,23 +35,46 @@ body {
   }
   .error-message{
     margin-top: 0px;
+    color: red;
   }
   
-  button, .button {
+  button{
     font-family: "Open Sans", sans-serif;
     font-style:italic;
     font-weight: bold;
     display: inline-block;
     background-color: #164863;
-    border: none;
-    color: #ddd;
+    border: 1px solid lightskyblue;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
+  }
+  .button{
+    font-family: "Open Sans", sans-serif;
+    font-style:italic;
+    font-weight: bold;
+    display: inline-block;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
   }
   .button{
     float: right;
   }
 
+  #changeButton:disabled{
+    background-color: white;
+    border: 1px solid #164863;
+    color: #164863;
+    
+  }
+
   #emessage{
     text-align: center;
+    color: red;
+  }
+
+  #successMessage{
+    text-align: center;
+    color: green;
   }
